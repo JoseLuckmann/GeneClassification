@@ -16,8 +16,8 @@ class SequencePreprocessor(BaseEstimator, TransformerMixin):
 def getKmers(sequence, size=6):
     return [sequence[x:x+size].lower() for x in range(len(sequence) - size + 1)]
     
-modelo_especie = joblib.load("../models/modelo_especie.joblib")
-modelo_proteina = joblib.load("../models/modelo_proteina.joblib")
+modelo_especie = joblib.load("./models/modelo_especie.joblib")
+modelo_proteina = joblib.load("./models/modelo_proteina.joblib")
 st.title("Análise de Sequência de DNA")
 
 
